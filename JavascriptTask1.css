@@ -5,7 +5,7 @@
 .cont{
   background-color: rgb(137, 43, 226);
   padding: 5.4%;
-}
+} 
 .former{
   background-color: rgb(254, 250, 254);
   padding: 50px;
@@ -20,4 +20,7 @@ h1{
 span{
   margin-left: 25px;
   color: red;
+}
+.data{
+  padding: 50px 250px;
 }

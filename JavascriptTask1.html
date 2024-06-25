@@ -10,7 +10,7 @@
 </head>
 <body> 
   <div class="cont d-flex justify-content-center">
-    <form class="former" action="" id="myform" onsubmit="myfunction(event)">
+    <form class="former" action="formprocess.php" id="myform" onsubmit="myfunction(event)">
       <h1 class="display-1 fw-bold">Login Page</h1>
       <div class="container">
         <label class="form-label fs-3 px-3 fw-light" for="email">Emailid :</label>
@@ -26,6 +26,21 @@
         <input class="btn btn-info" type="submit">
       </div>
     </form>
+  </div>
+  <div class="data container bg-warning">
+    <h1>Submitted Data</h1>
+    <table class="table table-bordered" id="dataTable" >
+      <thead class="table-primary fw-bold fs-5">
+       <tr>
+         <td>S-No</td>
+         <td>Email</td>
+         <td>Password</td>
+       </tr>
+      </thead>
+      <tbody class="table-info">
+
+      </tbody>
+     </table>
   </div>
    
   <script src="JavascriptTask1.js">
