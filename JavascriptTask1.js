@@ -45,26 +45,14 @@ function myfunction(event){
       paserr.innerHTML = "atleast 1 special character <br>";
       return ;
     }
-    // else {
-    //   // console.log("Email:", email);
-    //   // console.log("Password:", password); 
-    //   // return true;
-     
-    // } 
   }
-
   let dataTable = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
   let newRow = dataTable.insertRow(dataTable.rows.length);
-
   let cell1 = newRow.insertCell(0);
   let cell2 = newRow.insertCell(1);
   cell1.innerHTML = email;
   cell2.innerHTML = password;
-
   console.log("Email:", email);
   console.log("Password:", password);
-
-
-  document.getElementById('myform').reset();
-   
+  document.getElementById('myform').reset();   
 }
