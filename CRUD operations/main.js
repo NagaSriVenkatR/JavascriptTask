@@ -1,21 +1,20 @@
 let data = [];
 let editIndex = -1;
-let username = document.getElementById("email");
-let userpassword = document.getElementById("pass");
+let useremail = document.getElementById("email");
+let userpassword = document.getElementById("password");
 let emailerr = document.getElementById("emailerror");
 let paserr = document.getElementById("passerror");
-
 function myfunction(event) {
   event.preventDefault();
-  emailerr.innerHTML = "";
-  paserr.innerHTML = "";
-  let emailPattern = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
+  emailerr.innerHTML="";
+  paserr.innerHTML="";
+  let emailPattern = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-zA-Z]{2,20})$/;
   let upperCasePattern = /[A-Z]/;
   let lowerCasePattern = /[a-z]/;
   let numberPattern = /[0-9]/;
   let specialCharacterPattern = /[~!@#%&()$^_?]/;
   let minlengthCharacterPattern = /^.{8,16}$/;
-  let email = username.value;
+  let email = useremail.value;
   let password = userpassword.value;
   if (email === "") {
     emailerr.innerHTML = "Email is required";
@@ -45,21 +44,20 @@ function myfunction(event) {
       return;
     }
   }
-  if (editIndex === -1) {
-    data.push({ email, password });
-  } else {
-    data[editIndex] = { email, password };
+  if(editIndex === -1){
+    data.push({email,password});
+  }
+  else{
+    data[editIndex]={email,password};
     editIndex = -1;
   }
   updateTable();
   document.getElementById("myform").reset();
 }
 function updateTable() {
-  let dataTable = document
-    .getElementById("dataTable")
-    .getElementsByTagName("tbody")[0];
+  let dataTable = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
   dataTable.innerHTML = "";
-  for (let i = 0; i < data.length; i++) {
+  for(let i=0; i<data.length; i++){
     let newRow = dataTable.insertRow(dataTable.rows.length);
     let cell1 = newRow.insertCell(0);
     let cell2 = newRow.insertCell(1);
@@ -71,13 +69,14 @@ function updateTable() {
     cell4.innerHTML = `<button onclick="editRow(${i})" style="padding:5px 15px;background-color:purple;color:white;font-size:20px;border-radius:5px">Update</button>
                            <button onclick="deleteRow(${i})" style="padding:5px 15px;background-color:Red;color:white;font-size:20px;border-radius:5px">Delete</button>`;
   }
-}
+} 
 function updateRow(index) {
-  username.value = data[index].email;
-  userpassword.value = data[index].password;
+  useremail.value=data[index].email;
+  userpassword.value=data[index].password;
   editIndex = index;
 }
 function deleteRow(index) {
-  data.splice(index, 1);
+  data.splice(index,1);
   updateTable();
+  
 }
