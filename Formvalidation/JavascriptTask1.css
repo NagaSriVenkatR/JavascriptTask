@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url(image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cont {
+  padding: 50px;
+}
+.former {
+  /* background-color: rgb(254, 250, 254); */
+  padding: 50px;
+}
+h1 {
+  text-align: center;
+  margin-left: 50px;
+}
+span {
+  margin-left: 25px;
+  color: red;
+}
+.data {
+  padding: 50px 250px;
+}
