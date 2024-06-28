@@ -1,4 +1,4 @@
-let data = JSON.parse(localStorage.getItem("data"));
+let data = JSON.parse(localStorage.getItem("data")) || [];
 let editIndex = -1;
 let useremail = document.getElementById("email");
 let userpassword = document.getElementById("password");
@@ -84,6 +84,6 @@ function editRow(index) {
 
 function deleteRow(index) {
   data.splice(index, 1);
-  localStorage.setItem("data", JSON.stringify(data));
+  localStorage.removeItem("data", JSON.stringify(data));
   updateTable();
 }
