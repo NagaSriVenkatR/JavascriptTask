@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url(image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.cont {
+  padding: 50px;
+}
+.former {
+  padding: 50px;
+}
+h1 {
+  text-align: center;
+  margin-left: 50px;
+}
+.data {
+  padding: 50px 250px;
+}
