@@ -1,22 +1,74 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
-body {
-  background-image: url(image.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+.back{
+  
+  margin: 0px;
 }
-.cont {
-  padding: 50px;
-}
-.former {
+
+form {
   padding: 50px;
 }
 h1 {
   text-align: center;
   margin-left: 50px;
+  font-style: italic;
 }
 .data {
   padding: 50px 250px;
+}
+ */
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.form-section {
+  display: flex;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-section .left {
+  background-color: #399c7e;
+  padding: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.form-section .left img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+.form-section .right {
+  padding: 40px;
+  width: 400px;
+}
+.form-section .right h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.form-section .right p {
+  margin-bottom: 40px;
+  color: #777;
+}
+.table-container {
+  margin-top: 40px;
+  width: 100%;
+}
+.table-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sub{
+  margin-top: 50px;
 }

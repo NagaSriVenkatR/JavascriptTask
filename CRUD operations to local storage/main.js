@@ -20,7 +20,6 @@ function myfunction(event) {
   let password = userpassword.value;
   if (email === "") {
     emailerr.innerHTML = "Email is required";
-    return;
   } else if (!emailPattern.test(email)) {
     emailerr.innerHTML = "Invalid email format";
     return;
@@ -46,6 +45,19 @@ function myfunction(event) {
       return;
     }
   }
+  let isDuplicate = false;
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].email === email && i !== editIndex) {
+      isDuplicate = true;
+      break;
+    }
+  }
+
+  if (isDuplicate) {
+    emailerr.innerHTML = "Email already exists";
+    return;
+  }
+
   if (editIndex === -1) {
     data.push({ email, password });
   } else {
