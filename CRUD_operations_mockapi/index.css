@@ -5,6 +5,7 @@ body {
   justify-content: center;
 }
 .form-section {
+  margin-top: 50px;
   display: flex;
   background: #ffffff;
   border-radius: 10px;
@@ -47,6 +48,6 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
-.sub{
+.sub {
   margin-top: 50px;
 }
