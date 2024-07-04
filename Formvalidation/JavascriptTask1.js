@@ -1,7 +1,7 @@
 let useremail = document.getElementById("email");
-let userpassword = document.getElementById("pass");
+let userpassword = document.getElementById("password");
 let emailerr = document.getElementById("emailerror");
-let paserr = document.getElementById("passerror");
+let paserr = document.getElementById("passworderror");
 function myfunction(event) {
   event.preventDefault();
   emailerr.innerHTML = "";
@@ -16,7 +16,6 @@ function myfunction(event) {
   let password = userpassword.value;
   if (email === "") {
     emailerr.innerHTML = "Email is required";
-    return;
   } else if (!emailPattern.test(email)) {
     emailerr.innerHTML = "Invalid email format";
     return;

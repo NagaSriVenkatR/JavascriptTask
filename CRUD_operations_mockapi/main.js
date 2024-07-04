@@ -71,14 +71,14 @@ function myfunction(event) {
 
   document.getElementById("myform").reset();
 }
-
 function fetchData() {
-  fetch("https://jsonplaceholder.typicode.com/users")
+  fetch("https://6683c44d56e7503d1ade07d4.mockapi.io/userData/userData")
     .then((response) => {
       if (response.ok) {
         return response.json();
       } else {
         throw new Error("Failed to fetch data");
+        
       }
     })
     .then((users) => {
@@ -89,7 +89,7 @@ function fetchData() {
 }
 
 function createUser(user) {
-  fetch("https://jsonplaceholder.typicode.com/users", {
+  fetch("https://6683c44d56e7503d1ade07d4.mockapi.io/userData/userData", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -111,7 +111,7 @@ function createUser(user) {
 }
 
 function updateUser(index, user) {
-  fetch(`https://jsonplaceholder.typicode.com/users/${index + 1}`, {
+  fetch(`https://6683c44d56e7503d1ade07d4.mockapi.io/userData/userData`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -133,7 +133,7 @@ function updateUser(index, user) {
 }
 
 function deleteRow(index) {
-  fetch(`https://jsonplaceholder.typicode.com/users/${index + 1}`, {
+  fetch(`https://6683c44d56e7503d1ade07d4.mockapi.io/userData/userData`, {
     method: "DELETE",
   })
     .then((response) => {
@@ -151,7 +151,7 @@ function updateTable() {
   let dataTable = document
     .getElementById("dataTable")
     .getElementsByTagName("tbody")[0];
-  dataTable.innerHTML = ""; // Clear existing table rows
+  dataTable.innerHTML = ""; 
   for (let i = 0; i < data.length; i++) {
     let newRow = dataTable.insertRow(dataTable.rows.length);
     let cell1 = newRow.insertCell(0);
