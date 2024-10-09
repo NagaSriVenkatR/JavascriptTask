@@ -82,7 +82,7 @@ function updateTable() {
                            <button onclick="deleteRow(${i})" style="padding:5px 15px;background-color:Red;color:white;font-size:20px;border-radius:5px">Delete</button>`;
   }
 }
-function updateRow(index) {
+function editRow(index) {
   useremail.value = data[index].email;
   userpassword.value = data[index].password;
   editIndex = index;
